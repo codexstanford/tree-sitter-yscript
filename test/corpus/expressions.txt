@@ -1,0 +1,39 @@
+===========================
+Left-associative AND and OR
+===========================
+
+RULE 1 PROVIDES
+  y ONLY IF
+    fact a AND
+    fact b AND
+    fact c
+
+RULE 2 PROVIDES
+  y ONLY IF
+    fact a OR
+    fact b OR
+    fact c
+
+---
+
+(code
+  (rule_definition
+    name: (descriptor)
+    body: (rule_body
+            (only_if
+              dest_fact: (descriptor)
+               src_expr: (and_expr
+                           (and_expr
+                             (fact_expr)
+                             (fact_expr))
+                           (fact_expr)))))
+  (rule_definition
+    name: (descriptor)
+    body: (rule_body
+            (only_if
+              dest_fact: (descriptor)
+               src_expr: (or_expr
+                           (or_expr
+                             (fact_expr)
+                             (fact_expr))
+                           (fact_expr))))))

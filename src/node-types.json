@@ -1,5 +1,28 @@
 [
   {
+    "type": "and_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "and_expr",
+          "named": true
+        },
+        {
+          "type": "fact_expr",
+          "named": true
+        },
+        {
+          "type": "or_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "code",
     "named": true,
     "fields": {},
@@ -43,11 +66,42 @@
         "required": true,
         "types": [
           {
+            "type": "and_expr",
+            "named": true
+          },
+          {
             "type": "fact_expr",
+            "named": true
+          },
+          {
+            "type": "or_expr",
             "named": true
           }
         ]
       }
+    }
+  },
+  {
+    "type": "or_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "and_expr",
+          "named": true
+        },
+        {
+          "type": "fact_expr",
+          "named": true
+        },
+        {
+          "type": "or_expr",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -92,7 +146,15 @@
     }
   },
   {
+    "type": "AND",
+    "named": false
+  },
+  {
     "type": "ONLY IF",
+    "named": false
+  },
+  {
+    "type": "OR",
     "named": false
   },
   {
