@@ -1,0 +1,17 @@
+=====
+Rules
+=====
+
+RULE x PROVIDES
+  a ONLY IF
+    b
+
+---
+
+(code
+  (rule_definition
+    name: (descriptor)
+    body: (rule_body
+      (only_if
+        dest_fact: (descriptor)
+        src_expr: (fact_expr)))))

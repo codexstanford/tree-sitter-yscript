@@ -1,0 +1,17 @@
+{
+  "name": "tree-sitter-yscript",
+  "version": "1.0.0",
+  "description": "tree-sitter parser for yscript",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "nan": "^2.16.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.6"
+  }
+}
