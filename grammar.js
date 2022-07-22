@@ -15,6 +15,6 @@ module.exports = grammar({
 
     _expr: $ => choice(alias($.descriptor, $.fact_expr)),
 
-    descriptor: $ => /[a-z]+/
+    descriptor: $ => repeat1(/\S+/)
   }
 });

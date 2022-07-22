@@ -15,6 +15,16 @@
     }
   },
   {
+    "type": "descriptor",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "fact_expr",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "only_if",
     "named": true,
     "fields": {
@@ -92,13 +102,5 @@
   {
     "type": "RULE",
     "named": false
-  },
-  {
-    "type": "descriptor",
-    "named": true
-  },
-  {
-    "type": "fact_expr",
-    "named": true
   }
 ]

@@ -2,9 +2,9 @@
 Rules
 =====
 
-RULE x PROVIDES
-  a ONLY IF
-    b
+RULE rule x PROVIDES
+  fact a ONLY IF
+    fact b
 
 ---
 

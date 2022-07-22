@@ -104,8 +104,11 @@
       ]
     },
     "descriptor": {
-      "type": "PATTERN",
-      "value": "[a-z]+"
+      "type": "REPEAT1",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\S+"
+      }
     }
   },
   "extras": [
