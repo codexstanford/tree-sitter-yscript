@@ -4,7 +4,10 @@
   "description": "tree-sitter parser for yscript",
   "main": "bindings/node",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:grammar": "tree-sitter generate",
+    "build:wasm": "tree-sitter build-wasm",
+    "build": "npm run build:grammar && npm run build:wasm",
+    "test": "tree-sitter test"
   },
   "author": "",
   "license": "UNLICENSED",
