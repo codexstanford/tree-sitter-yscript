@@ -18,8 +18,11 @@ module.exports = grammar({
     _bool_expr: $ => choice(
       alias($.descriptor, $.fact_expr),
       $.and_expr,
-      $.or_expr
+      $.or_expr,
+      $.not_expr
     ),
+
+    not_expr: $ => prec.left(seq('NOT', alias($.descriptor, $.fact_expr))),
 
     and_expr: $ => prec.left(seq($._bool_expr, 'AND', $._bool_expr)),
 

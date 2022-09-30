@@ -117,8 +117,34 @@
         {
           "type": "SYMBOL",
           "name": "or_expr"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "not_expr"
         }
       ]
+    },
+    "not_expr": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "NOT"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "descriptor"
+            },
+            "named": true,
+            "value": "fact_expr"
+          }
+        ]
+      }
     },
     "and_expr": {
       "type": "PREC_LEFT",

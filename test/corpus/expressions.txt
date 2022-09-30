@@ -1,6 +1,6 @@
-===========================
+===
 Left-associative AND and OR
-===========================
+===
 
 RULE 1 PROVIDES
   y ONLY IF
@@ -37,3 +37,44 @@ RULE 2 PROVIDES
                              (fact_expr)
                              (fact_expr))
                            (fact_expr))))))
+
+===
+Negation
+===
+
+RULE 1 PROVIDES
+  x ONLY IF
+    NOT y
+
+---
+
+(code
+  (rule_definition
+    name: (descriptor)
+    body: (rule_body
+            (only_if
+              dest_fact: (descriptor)
+              src_expr: (not_expr
+                          (fact_expr))))))
+
+===
+Left-associative negation
+===
+
+RULE 1 PROVIDES
+  x ONLY IF
+    NOT y AND
+    z
+
+---
+
+(code
+  (rule_definition
+    name: (descriptor)
+    body: (rule_body
+            (only_if
+              dest_fact: (descriptor)
+              src_expr: (and_expr
+                          (not_expr
+                            (fact_expr))
+                          (fact_expr))))))
