@@ -9,7 +9,9 @@ module.exports = grammar({
 
     rule_body: $ => seq($._statement),
 
-    _statement: $ => choice($.only_if),
+    _statement: $ => choice($.if_then, $.only_if),
+
+    if_then: $ => seq('IF', field('src_expr', $._expr), 'THEN', field('dest_fact', $.descriptor)),
 
     only_if: $ => seq(field('dest_fact', $.descriptor), 'ONLY IF', field('src_expr', $._expr)),
 

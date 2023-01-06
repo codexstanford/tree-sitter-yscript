@@ -1,5 +1,5 @@
 =====
-Rules
+ONLY IF
 =====
 
 RULE rule x PROVIDES
@@ -15,3 +15,21 @@ RULE rule x PROVIDES
       (only_if
         dest_fact: (descriptor)
         src_expr: (fact_expr)))))
+
+=====
+IF THEN
+=====
+
+RULE rule x PROVIDES
+  IF fact a THEN
+    fact b
+
+---
+
+(code
+  (rule_definition
+    name: (descriptor)
+    body: (rule_body
+      (if_then
+        src_expr: (fact_expr)
+        dest_fact: (descriptor)))))

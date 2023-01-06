@@ -52,6 +52,44 @@
     "fields": {}
   },
   {
+    "type": "if_then",
+    "named": true,
+    "fields": {
+      "dest_fact": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "descriptor",
+            "named": true
+          }
+        ]
+      },
+      "src_expr": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "fact_expr",
+            "named": true
+          },
+          {
+            "type": "not_expr",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "not_expr",
     "named": true,
     "fields": {},
@@ -140,6 +178,10 @@
       "required": true,
       "types": [
         {
+          "type": "if_then",
+          "named": true
+        },
+        {
           "type": "only_if",
           "named": true
         }
@@ -177,6 +219,10 @@
     "named": false
   },
   {
+    "type": "IF",
+    "named": false
+  },
+  {
     "type": "NOT",
     "named": false
   },
@@ -194,6 +240,10 @@
   },
   {
     "type": "RULE",
+    "named": false
+  },
+  {
+    "type": "THEN",
     "named": false
   }
 ]

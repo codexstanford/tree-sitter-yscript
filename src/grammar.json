@@ -60,7 +60,40 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "if_then"
+        },
+        {
+          "type": "SYMBOL",
           "name": "only_if"
+        }
+      ]
+    },
+    "if_then": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "IF"
+        },
+        {
+          "type": "FIELD",
+          "name": "src_expr",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expr"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "THEN"
+        },
+        {
+          "type": "FIELD",
+          "name": "dest_fact",
+          "content": {
+            "type": "SYMBOL",
+            "name": "descriptor"
+          }
         }
       ]
     },
